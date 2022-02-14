@@ -8,9 +8,9 @@ Created on 2022年1月24日
 
 if __name__ == '__main__':
     a = ('a', 'b', ['A', 'B', 'C'])
-    print a
+    print(a)
     a[2][0] = 'x'
     a[2][1] = 'y'
-    print a
+    print(a)
     bytes = 'aaaadfddeeff'
-    print bytes.count('a', 'd')
+    print(bytes.count('a'))
