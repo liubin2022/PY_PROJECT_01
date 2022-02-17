@@ -6,8 +6,8 @@ Created on 2022年1月24日
 @note: array.array
 """
 
-import sys
 import os
+import sys
 import platform
 
 
@@ -30,13 +30,11 @@ import platform
 
 
 def main(args):
-    print(args)
-    print(' '.join(args))
     # print(os.getenv('path'))
     # print(os.system())
-    if platform.system() is 'Windows':
+    if platform.system() == 'Windows':
         print('Windows系统')
-    elif platform.system() is 'Linux':
+    elif platform.system() == 'Linux':
         os.environ['PATH'] = '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
     else:
         print('其他')
