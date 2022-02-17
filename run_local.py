@@ -33,11 +33,12 @@ def main(args):
     # print(os.getenv('path'))
     # print(os.system())
     if platform.system() == 'Windows':
-        print('Windows系统')
+        print('Windows System')
     elif platform.system() == 'Linux':
+        print('linux System')
         os.environ['PATH'] = '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
     else:
-        print('其他')
+        print('other system')
     log_dir = 'results'
     os.system('robot --outputdir "%s" %s' % (log_dir, ' '.join(args)))
 
