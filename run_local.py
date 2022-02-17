@@ -6,22 +6,23 @@ Created on 2022年1月24日
 @note: array.array
 """
 
-
 import sys
 import os
+import platform
 
-#sys.argv[0]=run_local.py
 
-#sys.argv[1]=aa
+# sys.argv[0]=run_local.py
 
-#pybot -i "sys.argv[0]" -d result Suites
+# sys.argv[1]=aa
 
-#print 'Argument List:', str(sys.argv[1])
+# pybot -i "sys.argv[0]" -d result Suites
 
-#os.system("pybot -t %s -d result Suites>>ping_result" % sys.argv[1])
+# print 'Argument List:', str(sys.argv[1])
 
-#robot --outputdir /tmp/xcloud/result/ /tmp/xcloud/PY_PROJECT_01/Suite/TestCase01/TC_001.robot
-#robot -t testcast0001 -d /tmp/xcloud/result/ /tmp/xcloud/PY_PROJECT_01/Suite
+# os.system("pybot -t %s -d result Suites>>ping_result" % sys.argv[1])
+
+# robot --outputdir /tmp/xcloud/result/ /tmp/xcloud/PY_PROJECT_01/Suite/TestCase01/TC_001.robot
+# robot -t testcast0001 -d /tmp/xcloud/result/ /tmp/xcloud/PY_PROJECT_01/Suite
 
 
 # os.system("robot %s %s -d results %s" % (sys.argv[1], sys.argv[2], sys.argv[3]))
@@ -31,6 +32,14 @@ import os
 def main(args):
     print(args)
     print(' '.join(args))
+    # print(os.getenv('path'))
+    # print(os.system())
+    if platform.system() is 'Windows':
+        print('Windows系统')
+    elif platform.system() is 'Linux':
+        os.environ['PATH'] = '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    else:
+        print('其他')
     log_dir = 'results'
     os.system('robot --outputdir "%s" %s' % (log_dir, ' '.join(args)))
 
