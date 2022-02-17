@@ -24,4 +24,16 @@ import os
 #robot -t testcast0001 -d /tmp/xcloud/result/ /tmp/xcloud/PY_PROJECT_01/Suite
 
 
-os.system("robot %s %s -d result %s" % (sys.argv[1], sys.argv[2], sys.argv[3]))
+# os.system("robot %s %s -d results %s" % (sys.argv[1], sys.argv[2], sys.argv[3]))
+# run_local.py -t testcase001 Suite
+
+
+def main(args):
+    print(args)
+    print(' '.join(args))
+    log_dir = 'results'
+    os.system('robot --outputdir "%s" %s' % (log_dir, ' '.join(args)))
+
+
+if __name__ == '__main__':
+    main(sys.argv[1:])
