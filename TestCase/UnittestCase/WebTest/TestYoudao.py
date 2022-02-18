@@ -5,16 +5,17 @@ Created on 2022年1月24日
 @author: LiuBin
 @note: youdao.com
 """
+import time
+import unittest
 from selenium import webdriver
-import unittest, time
 from selenium.webdriver.common.by import By
 
 
-class YoudaoTest(unittest.TestCase):
+class TestYoudao(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Firefox()
         self.driver.implicitly_wait(3)
-        self.base_url = "http://www.youdao.com"
+        self.base_url = "https://www.youdao.com"
 
     def test_youdao(self):
         driver = self.driver

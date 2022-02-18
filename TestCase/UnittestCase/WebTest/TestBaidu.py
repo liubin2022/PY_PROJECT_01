@@ -11,11 +11,11 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 
-class YoudaoTest(unittest.TestCase):
+class TestBaidu(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Firefox()
         self.driver.implicitly_wait(3)
-        self.base_url = "http://www.baidu.com"
+        self.base_url = "https://www.baidu.com"
 
     def test_youdao(self):
         driver = self.driver
