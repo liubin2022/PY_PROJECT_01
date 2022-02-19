@@ -17,7 +17,7 @@ class TestBaidu(unittest.TestCase):
         self.driver.implicitly_wait(3)
         self.base_url = "https://www.baidu.com"
 
-    def test_youdao(self):
+    def test_baidu(self):
         driver = self.driver
         driver.get(self.base_url + "/")
         driver.find_element(By.XPATH, '//input[@id="kw"]').clear()
