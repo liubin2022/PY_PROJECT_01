@@ -6,15 +6,15 @@ Created on 2022年1月24日
 @note: baidu.com
 """
 import time
+import platform
 import unittest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from Common.System.SystemAW import SystemAW
 
 
-class TestBaidu(unittest.TestCase, SystemAW):
+class TestBaidu(unittest.TestCase):
     def setUp(self):
-        if SystemAW.get_system_type() == 'Windows':
+        if platform.system() == 'Windows':
             self.driver = webdriver.Firefox()
         else:
             self.driver = webdriver.FirefoxProfile()

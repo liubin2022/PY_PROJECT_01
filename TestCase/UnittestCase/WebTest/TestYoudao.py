@@ -5,16 +5,16 @@ Created on 2022年1月24日
 @author: LiuBin
 @note: youdao.com
 """
+import platform
 import time
 import unittest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from Common.System.SystemAW import SystemAW
 
 
 class TestYoudao(unittest.TestCase):
     def setUp(self):
-        if SystemAW.get_system_type() == 'Windows':
+        if platform.system() == 'Windows':
             self.driver = webdriver.Firefox()
         else:
             self.driver = webdriver.FirefoxProfile()
