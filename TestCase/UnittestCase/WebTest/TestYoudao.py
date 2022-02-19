@@ -9,12 +9,16 @@ import time
 import unittest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from Common.System.SystemAW import SystemAW
 
 
 class TestYoudao(unittest.TestCase):
     def setUp(self):
-        self.driver = webdriver.Firefox()
-        self.driver.implicitly_wait(8)
+        if SystemAW.get_system_type() == 'Windows':
+            self.driver = webdriver.Firefox()
+        else:
+            self.driver = webdriver.FirefoxProfile()
+        self.driver.implicitly_wait(3)
         self.base_url = "https://www.youdao.com"
 
     def test_youdao(self):

@@ -34,7 +34,7 @@ class SequenceCase:
             exec("a = 4", dic)  # 在 exec 执行的语句后面跟一个作用域 dic
             print(dic.keys())  # exec 后，dic 的 key 多了一个
         except Exception as e:
-            logging.Logger('test')
+            logging.Logger('webtc')
             print(e)
 
     def dict_meth_case03(self):
@@ -46,7 +46,7 @@ class SequenceCase:
             exec("a = 4", dic)  # 在 exec 执行的语句后面跟一个作用域 dic
             print(dic.keys())  # exec 后，dic 的 key 多了一个
         except Exception as e:
-            logging.Logger('test')
+            logging.Logger('webtc')
             print(e)
 
 

@@ -17,7 +17,7 @@ class RequestAW:
         self.req_aw = RequestsLibrary()
 
     def login_aw(self):
-        alias = 'test'
+        alias = 'webtc'
         url = 'so?apiKey=YOUR-API-KEY'
         headers = {
             'Authentication': 'apiKey=0548cc14b65b457f92207b6c1559442e'

@@ -9,11 +9,15 @@ import time
 import unittest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from Common.System.SystemAW import SystemAW
 
 
-class TestBaidu(unittest.TestCase):
+class TestBaidu(unittest.TestCase, SystemAW):
     def setUp(self):
-        self.driver = webdriver.Firefox()
+        if SystemAW.get_system_type() == 'Windows':
+            self.driver = webdriver.Firefox()
+        else:
+            self.driver = webdriver.FirefoxProfile()
         self.driver.implicitly_wait(3)
         self.base_url = "https://www.baidu.com"
 

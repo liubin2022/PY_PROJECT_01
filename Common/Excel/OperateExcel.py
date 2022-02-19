@@ -17,12 +17,12 @@ class OperateExcel():
 
     def get_excel_max_row(self, file_name):
         """
-            - File: excel path. ex: c:\\test\\textopenpyxl.xlsx \n
+            - File: excel path. ex: c:\\webtc\\textopenpyxl.xlsx \n
         Return:\n
             - ws: excel max number \n
         Author: LiuBin  Date: 2018-11-13 \n
         Notes: Gets the maximum number of rows in the excel table. \n
-        Examples: ${value} | GetExcelMaxRow | test.xlsx \n
+        Examples: ${value} | GetExcelMaxRow | webtc.xlsx \n
         """
         self.lw_aw = load_workbook(file_name)
         sheet_names = self.lw_aw.get_sheet_names()
@@ -32,14 +32,14 @@ class OperateExcel():
 
     def get_excel_info_by_cell(self, file_name, row_num, col_mum):
         """
-            - File: excel path. ex: c:\\test\\textopenpyxl.xlsx \n
+            - File: excel path. ex: c:\\webtc\\textopenpyxl.xlsx \n
             - RowNum: row number  \n
             - ColNum: col number \n
         Return:\n
             - ws: excel value \n
         Author: LiuBin    Date: 2018-11-13 \n
         Notes: Gets value in the excel table \n
-        Examples: ${value} | GetExcelInfoByCell | test.xlsx | 1 | 1 \n
+        Examples: ${value} | GetExcelInfoByCell | webtc.xlsx | 1 | 1 \n
         """
         self.lw_aw = load_workbook(file_name)
         sheet_names = self.lw_aw.get_sheet_names()

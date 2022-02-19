@@ -5,6 +5,7 @@ Created on 2016年8月21日
 @author: LiuBin
 @note: excel operation
 """
+import logging
 import os
 import platform
 import sys
@@ -12,9 +13,9 @@ import sys
 sys.path.append('..')
 
 
-class SystemAW():
+class SystemAW:
     def __init__(self):
-        pass
+        self.separator = ''
 
     def get_separator(self):
         if 'Windows' in platform.system():
@@ -22,6 +23,15 @@ class SystemAW():
         else:
             self.separator = '/'
         return self.separator
+
+    @staticmethod
+    def get_system_type():
+        if platform.system() == 'Windows':
+            return 'Windows'
+        elif platform.system() == 'Linux':
+            return 'Linux'
+        else:
+            return 'other system'
 
     def get_project_path(self, project_dir_name):
         project_path = ''
@@ -35,10 +45,12 @@ class SystemAW():
                 return project_path.split(separator, 1)[1]
         return None
 
-    def should_be_equal(self, str1, str2):
+    @staticmethod
+    def should_be_equal(str1, str2):
         assert str1 == str2
 
-    def should_contain(self, str1, str2):
+    @staticmethod
+    def should_contain(str1, str2):
         assert str2 in str1
 
 
