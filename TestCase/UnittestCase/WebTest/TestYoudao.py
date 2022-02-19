@@ -14,10 +14,7 @@ from selenium.webdriver.common.by import By
 
 class TestYoudao(unittest.TestCase):
     def setUp(self):
-        if platform.system() == 'Windows':
-            self.driver = webdriver.Firefox()
-        else:
-            self.driver = webdriver.FirefoxProfile()
+        self.driver = webdriver.Firefox()
         self.driver.implicitly_wait(3)
         self.base_url = "https://www.youdao.com"
 
