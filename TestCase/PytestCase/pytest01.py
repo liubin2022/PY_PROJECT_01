@@ -3,7 +3,7 @@ __author__ = 'Admin'
 import pytest
 
 
-class Test_Case_01:
+class TestCase01:
     def test_01(self):
         print("test01")
 
