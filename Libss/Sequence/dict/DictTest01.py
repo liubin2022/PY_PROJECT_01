@@ -10,7 +10,7 @@ from robot.libraries.BuiltIn import BuiltIn
 from Common.Excel.OperateExcel import OperateExcel
 
 
-class DictTest02:
+class DictTest01:
     builtIn_aw = BuiltIn()
     excel_aw = OperateExcel()
 
@@ -72,10 +72,16 @@ if __name__ == '__main__':
             #     print(j["startTime"])
             #     print(j["endTime"])
             if j == "opt":
-                if  j == "testing":
-                    print(i[j]["opt"])
+                print(j)
+            if j == "startTime":
+                print(j)
+            if j == "endTime":
+                print(j)
+            if  j == "testing":
+                print(i[j]["opt"])
+
                 # print(res01[i[j]])
-                builtin_aw.should_be_equal(res01[i[j]], res02[x][y])
+                # builtin_aw.should_be_equal(res01[i[j]], res02[x][y])
             y +=1
         x += 1
 
